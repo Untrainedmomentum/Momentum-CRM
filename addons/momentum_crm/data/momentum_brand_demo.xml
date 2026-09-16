@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="brand_mecosta_county_kids" model="momentum.brand">
+        <field name="name">Mecosta County Kids</field>
+        <field name="code">MCK</field>
+        <field name="website">https://mecostacountykids.com</field>
+        <field name="description">Internal test brand for local family events and community content.</field>
+    </record>
+
+    <record id="brand_untrained_matriarch" model="momentum.brand">
+        <field name="name">Untrained Matriarch</field>
+        <field name="code">UMAT</field>
+        <field name="website">https://untrainedmatriarch.com</field>
+        <field name="description">Internal test brand for publishing, newsletter, and audience workflows.</field>
+    </record>
+</odoo>
