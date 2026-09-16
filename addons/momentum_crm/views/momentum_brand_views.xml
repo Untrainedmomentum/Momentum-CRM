@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_momentum_brand_list" model="ir.ui.view">
+        <field name="name">momentum.brand.list</field>
+        <field name="model">momentum.brand</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="website"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_momentum_brand_form" model="ir.ui.view">
+        <field name="name">momentum.brand.form</field>
+        <field name="model">momentum.brand</field>
+        <field name="arch" type="xml">
+            <form string="Momentum Brand">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="website"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="What is this brand for?"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_momentum_brand" model="ir.actions.act_window">
+        <field name="name">Brands</field>
+        <field name="res_model">momentum.brand</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_momentum_root" name="Momentum" sequence="20" web_icon="momentum_crm,static/description/icon.png"/>
+    <menuitem id="menu_momentum_brands" name="Brands" parent="menu_momentum_root" action="action_momentum_brand" sequence="10"/>
+</odoo>
